@@ -8,14 +8,31 @@ body {
  background-color: #fafafa;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+ margin: 0;
+}
+
 ol,
 ul {
  list-style: none;
+ padding: 0;
+ margin: 0;
+
 }
 
 a {
  text-decoration: none;
  color: inherit;
+}
+
+img {
+ display: block;
 }
 
 button {
@@ -27,9 +44,26 @@ address {
 }
 
 /* Base styles */
-.section {}
+.sr-only {
+ position: absolute;
+ white-space: nowrap;
+ width: 1px;
+ height: 1px;
+ overflow: hidden;
+ border: 0;
+ padding: 0;
+ clip: rect(0 0 0 0);
+ clip-path: inset(100%);
+ margin: -1px;
+}
+
+.section {
+ padding: 60px 0;
+}
 
 .section-title {
+ max-width: 412px;
+ margin: 0 auto 50px;
  font-weight: 600;
  font-size: 24px;
  line-height: 1.17;
@@ -42,7 +76,19 @@ address {
  color: #fd9222;
 }
 
+.container {
+ max-width: 1126px;
+ padding: 0 16px;
+ margin: 0 auto;
+
+ outline: 2px solid red;
+}
+
 .logo {
+ display: inline-flex;
+ align-items: center;
+ gap: 4px;
+
  font-weight: 700;
  font-size: 18px;
  line-height: 1.11111;
@@ -53,11 +99,30 @@ address {
 .logo-icon {}
 
 /* Sociale styles */
-.socials {}
+.socials {
+ display: flex;
+ gap: 14px;
+}
 
-.socials-item {}
+.socials-item {
+ width: 40px;
+ height: 40px;
+}
 
-.socials-link {}
+.socials-link {
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ border: 1px solid rgba(17, 17, 17, 0.1);
+ border-radius: 10px;
+ width: 100%;
+ height: 100%;
+}
+
+.socials-link:hover,
+.socials-link:focus {
+ border-color: rgba(253, 146, 34, 0.1);
+}
 
 .socials-icon {}
 
